@@ -69,7 +69,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'disha_backend.urls'
-AUTH_USER_MODEL = 'api.User'
+AUTH_USER_MODEL = 'api.Users'
 
 TEMPLATES = [
     {
@@ -93,16 +93,55 @@ WSGI_APPLICATION = 'disha_backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'disha_db',
+#         'USER': 'root',
+#         'PASSWORD': 'Hkm9900871928@',
+#         'HOST': 'localhost',
+#         'PORT': '3306',
+#     }
+# }
+
+import os
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': os.environ.get('MYSQLDATABASE', 'railway'),
+#         'USER': os.environ.get('MYSQLUSER', 'root'),
+#         'PASSWORD': os.environ.get('MYSQLPASSWORD', 'sPwebJkhSHiIphhaPPYoucVUjddDYbjz'),
+#         'HOST': os.environ.get('MYSQLHOST', 'mysql-production-a72e.up.railway.app'),
+#         'PORT': os.environ.get('MYSQLPORT', '3306'),
+#     }
+# }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': os.environ.get('MYSQLDATABASE', 'railway'),  # DB name
+#         'USER': os.environ.get('MYSQLUSER', 'root'),         # DB user
+#         'PASSWORD': os.environ.get('MYSQLPASSWORD', 'sPwebJkhSHiIphhaPPYoucVUjddDYbjz'),  # DB password
+#         'HOST': os.environ.get('MYSQLHOST', 'mysql-production-a72e.up.railway.app'),  # DB host
+#         'PORT': os.environ.get('MYSQLPORT', '3306'),         # DB port
+#     }
+# }
+import os
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'disha_db',
-        'USER': 'root',
-        'PASSWORD': 'Hkm9900871928@',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'NAME': os.environ.get('MYSQLDATABASE', 'railway'),
+        'USER': os.environ.get('MYSQLUSER', 'root'),
+        'PASSWORD': os.environ.get('MYSQLPASSWORD', 'aigbtwevhcrXepqzFIwAjTJHkjGyNsbJ'),
+        'HOST': os.environ.get('MYSQLHOST', 'gondola.proxy.rlwy.net'),
+        'PORT': os.environ.get('MYSQLPORT', '26947'),
     }
 }
+
+
+
 
 
 
